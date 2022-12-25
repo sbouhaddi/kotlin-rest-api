@@ -1,3 +1,8 @@
 package com.sbouhaddi.kotlinapi.model
 
-data class Message(val id: String?, val text: String)
+
+import jakarta.persistence.*
+
+@Entity
+@Table(name = "MESSAGES")
+data class Message(@Id @GeneratedValue(strategy = GenerationType.AUTO) var id:Long, val text: String)
