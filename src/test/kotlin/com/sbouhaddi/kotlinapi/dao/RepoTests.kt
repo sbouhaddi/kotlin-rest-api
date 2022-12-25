@@ -27,7 +27,7 @@ class RepoTests(
 
     @Test
     fun `When findByIdOrNull then return Message`() {
-        val found = messageRepository.findByIdOrNull(message.id!!)
+        val found = messageRepository.findByIdOrNull(message.id)
         assertThat(found).isEqualTo(message)
     }
 
